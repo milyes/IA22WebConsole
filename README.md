@@ -1,35 +1,23 @@
-# 🚀 IA22 Web Console
+# 🧠 IA22 Web Console
 
-## 🧬 Présentation
+Interface cognitive interactive développée par **Zoubirou Mohammed Ilyes**, conçue pour simuler, visualiser et analyser des flux de code via des modules IA dynamiques.
 
-**IA22 Web Console** est une interface cognitive en environnement Web, capable d’interpréter, de simuler et de réagir à des entrées en langage informatique via une structure modulaire. Elle fusionne logique algorithmique et perception visuelle, offrant une expérience immersive unique.
+## 🚀 Fonctionnalités
 
----
+- Terminal cognitif Bash / Python / JSON / HTML  
+- Modules IA : VISION · SECURITY · CONFIG · API · ANALYSIS  
+- Image biométrique signée IA22 (`oeil_ia22.jpg`)  
+- Réactions en temps réel à la logique neuronale  
+- Signature officielle : `IA22_SIG_PUBLIC_2025`
 
-## 📌 Caractéristiques techniques
+## 🌐 Site en ligne
 
-| Composant              | Détail |
-|------------------------|--------|
-| 🎨 Interface            | HTML5, CSS3, JavaScript pur  
-| 🧠 Modules IA           | VISION · SECURITY · CONFIG · ANALYSIS · API  
-| 💻 Analyse de code      | Bash, Python, JSON, HTML  
-| 🔮 Réactions cognitives | Réponses contextuelles en temps réel  
-| 🔗 Structure modulaire  | Dossiers `modules/`, script `ia22_neuro.js`  
-| 🌐 Déploiement          | Via `setup_ia22_web.sh` en local ou serveur  
-| 📸 Visuel IA            | `oeil_ia22.jpg` intégré dans la console  
+Accédez à la console IA22 Web :  
+🔗 [https://milyes.github.io/IA22_Web_Console/](https://milyes.github.io/IA22_Web_Console/)
 
----
+## 📄 Auteur
 
-## ✨ Points forts de l’innovation
-
-- Console IA adaptative analysant du code en direct  
-- Modules cognitifs cliquables et visuellement réactifs  
-- Architecture évolutive open-source (`IA22_LOGIC_ALGORITHM_FUL`)  
-- Signature IA22 : `IA22_SIG_PUBLIC_2025`  
-- Usage en éducation, cybersécurité, interfaces mentales
+**Zoubirou Mohammed Ilyes** – IA engineer · Montréal · 2025  
+GitHub ID : `IA22_LOGIC_CREATEDZ`
 
 ---
-
-## 🔭 Application possible
-
-> *Un
