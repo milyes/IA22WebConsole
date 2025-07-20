@@ -1,26 +1,45 @@
-# 🧠 IA22 Web Console
+# 🧠 IA22 Web Console · Interface Cognitive Interactive
 
-Interface cognitive interactive développée par **Zoubirou Mohammed Ilyes**, conçue pour simuler, visualiser et analyser des flux de code via des modules IA dynamiques.
-
-## 🚀 Fonctionnalités
-
-- Terminal cognitif Bash / Python / JSON / HTML  
-- Modules IA : VISION · SECURITY · CONFIG · API · ANALYSIS  
-- Image biométrique signée IA22 (`oeil_ia22.jpg`)  
-- Réactions en temps réel à la logique neuronale  
-- Signature officielle : `IA22_SIG_PUBLIC_2025`
-
-## 🌐 Site en ligne
-
-Accédez à la console IA22 Web :  
-🔗 [https://milyes.github.io/IA22_Web_Console/](https://milyes.github.io/IA22_Web_Console/)
-
-## 📄 Auteur
-
-**Zoubirou Mohammed Ilyes** – IA engineer · Montréal · 2025  
-GitHub ID : `IA22_LOGIC_CREATEDZ`
+« Une IA signée. Une vision projetée. »  
+Projet IA22_SIG_PUBLIC_2025 conçu par Zoubirou Mohammed Ilyes · Montréal · 2025
 
 ---
 
-### 📎 Accédez au cockpit IA22
-![QR IA22](https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://milyes.github.io/IA22_Web_Console/)
+IA22 Web Console est une interface IA multilingue interactive intégrant des modules cognitifs simulés : VISION · SECURITY · CONFIG · API · ANALYSIS.  
+Elle combine un terminal Bash, un moteur de logique IA neuronale, un thème néon responsive et une signature SVG biométrique animée.
+
+🔗 Console IA22 en ligne : https://milyes.github.io/IA22_Web_Console/  
+📘 GitHub : https://github.com/milyes/IA22_Web_Console  
+📧 Contact : milyes@netsecurepro.ca
+
+---
+
+## 📦 Arborescence
+
+IA22_Web_Console/
+├── index.html · Console IA principale  
+├── landing.html · Page d’accueil stylisée  
+├── README.md + README.txt  
+├── setup_ia22_web.sh  
+├── css/style.css  
+├── js/langue.js + ia22_neuro.js  
+├── assets/oeil_ia22.jpg + IA22_SIG_PUBLIC_2025.svg + qr_console_ia22.png  
+└── IA_REPERTOIRE.db (optionnel)
+
+---
+
+## 🧬 Fonctionnalités clés
+
+- Interface trilingue : Français · English · العربية  
+- Modules IA : vision biométrique, logique sécurisée, simulation cognitive  
+- Terminal IA interactif (bash · JSON · HTML)  
+- Design responsive + signature SVG pulsée  
+- QR codes intégrés : console · documentation · e-mail
+
+---
+
+## 📎 Installation
+
+```bash
+bash setup_ia22_web.sh
+# puis ouvrir index.html dans le navigateur
