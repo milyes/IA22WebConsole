@@ -1,0 +1,2 @@
+# IA22_Web_Console
+IA22 Web Console** est une interface cognitive en environnement Web, capable d’interpréter, de simuler et de réagir à des entrées en langage informatique via une structure modulaire. Elle fusionne logique algorithmique et perception visuelle, offrant une expérience immersive unique
