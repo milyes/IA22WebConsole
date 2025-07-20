@@ -21,3 +21,6 @@ Accédez à la console IA22 Web :
 GitHub ID : `IA22_LOGIC_CREATEDZ`
 
 ---
+
+### 📎 Accédez au cockpit IA22
+![QR IA22](https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https://milyes.github.io/IA22_Web_Console/)
