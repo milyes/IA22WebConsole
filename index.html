@@ -1,177 +1,143 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>IA22 Visual Console — NetSecurePro</title>
-  <style>
-    :root {
-      --bg-color: #0c0c0c;
-      --accent-color: #00ffaa;
-      --text-color: #e0f7f3;
-      --font-mono: 'Source Code Pro', monospace;
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      font-family: var(--font-mono);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 2rem 1rem;
-      min-height: 100vh;
-      animation: fadeIn 1.5s ease;
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    header {
-      font-size: 2rem;
-      color: var(--accent-color);
-      margin-bottom: 1rem;
-      text-align: center;
-      text-shadow: 0 0 8px var(--accent-color);
-    }
-    .slogan {
-      margin: 1rem 0;
-    }
-    svg {
-      width: 100%;
-      height: 60px;
-    }
-    svg text {
-      font-size: 22px;
-      fill: var(--accent-color);
-      font-family: var(--font-mono);
-    }
-    main {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      width: 100%;
-      max-width: 900px;
-    }
-    section.option {
-      background: rgba(0, 255, 170, 0.1);
-      border: 1px solid var(--accent-color);
-      border-radius: 8px;
-      padding: 1.5rem;
-      box-shadow: 0 0 12px rgba(0, 255, 170, 0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-    }
-    section.option:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 18px var(--accent-color);
-    }
-    .cli {
-      margin-top: 2rem;
-      width: 90%;
-      max-width: 600px;
-      background: #111;
-      border: 1px solid var(--accent-color);
-      padding: 1rem;
-      font-size: 1rem;
-      color: var(--accent-color);
-      box-shadow: 0 0 8px rgba(0, 255, 170, 0.4);
-    }
-    .cli span::after {
-      content: "_";
-      animation: blink 1s step-start infinite;
-    }
-    @keyframes blink {
-      50% { opacity: 0; }
-    }
-    button#activateIA {
-      margin: 2rem auto 0;
-      background-color: var(--accent-color);
-      border: none;
-      color: var(--bg-color);
-      font-weight: 700;
-      font-size: 1.2rem;
-      padding: 0.75rem 2rem;
-      border-radius: 999px;
-      cursor: pointer;
-      box-shadow: 0 0 12px var(--accent-color);
-      transition: background-color 0.25s ease;
-      display: block;
-    }
-    button#activateIA:hover {
-      background-color: #00cc8c;
-    }
-    .qr {
-      margin-top: 2rem;
-      text-align: center;
-    }
-    footer {
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      color: #555;
-      text-align: center;
-      width: 100%;
-      max-width: 900px;
-      border-top: 1px solid #222;
-      padding-top: 1rem;
-    }
-    @media (max-width: 480px) {
-      header { font-size: 1.6rem; }
-      section.option { padding: 1rem; }
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Fiche IA22 - Zoubirou Mohammed Ilyes</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+  body {
+    margin: 0;
+    padding: 2rem 3rem;
+    background-color: #0c0c0c;
+    color: #00ffaa;
+    font-family: 'Source Code Pro', monospace, monospace;
+    font-size: 14pt;
+    line-height: 1.4;
+  }
+
+  header {
+    border-bottom: 2px solid #00ffaa;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header h1 {
+    font-size: 2rem;
+    margin: 0;
+    letter-spacing: 0.1em;
+  }
+
+  .slogan {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-align: right;
+    width: 50%;
+  }
+
+  .qr-code {
+    width: 120px;
+    height: 120px;
+    border: 2px solid #00ffaa;
+    padding: 0.3rem;
+    background: #000;
+  }
+
+  main {
+    margin-bottom: 3rem;
+  }
+
+  h2 {
+    border-bottom: 1px solid #00ffaa;
+    padding-bottom: 0.3rem;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+  }
+
+  section.bio p {
+    margin: 0.3rem 0 0.8rem 0;
+  }
+
+  section.modules ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+  }
+
+  section.modules li {
+    padding: 0.3rem 0;
+    border-bottom: 1px dashed #004433;
+  }
+
+  footer {
+    border-top: 2px solid #00ffaa;
+    padding-top: 1rem;
+    font-size: 0.8rem;
+    text-align: center;
+    color: #007744;
+  }
+
+  footer a {
+    color: #00ffaa;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  /* Simulated SVG Slogan style */
+  .slogan span {
+    color: #007744;
+    font-weight: 900;
+  }
+</style>
 </head>
 <body>
-  <header>Console IA22 — NetSecurePro</header>
-
-  <div class="slogan">
-    <svg>
-      <text x="50%" y="40" text-anchor="middle">
-        Signed Intelligence. Projected Vision.
-        <animate attributeName="fill" values="#00ffaa;#00ccff;#ff00cc;#00ffaa" dur="4s" repeatCount="indefinite"/>
-      </text>
-    </svg>
+<header>
+  <h1>Zoubirou Mohammed Ilyes</h1>
+  <div class="qr-code">
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://milyes.github.io/NetSecurePro-IA-rList" alt="QR Code IA22" width="120" height="120" />
   </div>
+</header>
 
-  <main>
-    <section class="option">
-      <h2>Thème Dark Neon</h2>
-      <p>Fond noir élégant avec accents vert néon, typographie monospace pour effet terminal IA.</p>
-    </section>
-    <section class="option">
-      <h2>Layout Responsive</h2>
-      <p>Disposition en grille adaptative, compatible mobile & desktop, fluide et moderne.</p>
-    </section>
-    <section class="option">
-      <h2>Mode CLI / Visuel</h2>
-      <p>Interface stylisée avec zones de commande simulée et animations sur hover.</p>
-    </section>
-  </main>
+<div class="slogan">
+  <span>Signed Intelligence.</span><br />
+  Projected Vision.
+</div>
 
-  <div class="cli">
-    <div>> IA22 /visual-console: <span id="cli-output">Ready...</span></div>
-  </div>
+<main>
+  <section class="bio">
+    <h2>Bio officielle</h2>
+    <p>Développeur IA indépendant, fondateur de <strong>NetSecurePro</strong>.</p>
+    <p>Spécialisé en cybersécurité, intelligence artificielle et développement mobile intelligent.</p>
+    <p>Basé à Montréal, Canada.</p>
+    <p>ORCID : <a href="https://orcid.org/0009-0007-7571-3178" target="_blank" rel="noopener noreferrer">0009-0007-7571-3178</a></p>
+  </section>
 
-  <button id="activateIA" onclick="simulateIA()">Activer IA Cognitive 🚀</button>
+  <section class="modules">
+    <h2>Modules IA22 actifs</h2>
+    <ul>
+      <li>Terminal IA interactif</li>
+      <li>Interface mobile tactile</li>
+      <li>Graphismes SVG signés</li>
+      <li>Scripts Bash autonomes</li>
+      <li>QR Codes dynamiques GitHub</li>
+    </ul>
+  </section>
 
-  <div class="qr">
-    <p style="color: var(--text-color); font-size: 0.9rem;">Accès direct via QR :</p>
-    <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://milyes.github.io/IA22WebConsole/" alt="QR IA22">
-  </div>
+  <section class="description">
+    <h2>Description cockpit IA22</h2>
+    <p>Le cockpit IA22 permet une gestion centralisée et fluide de modules d’intelligence artificielle,</p>
+    <p>intégrant terminal CLI, interface WebView mobile, scripts automatisés et interaction tactile.</p>
+    <p>Utilisation idéale : incubateurs, clients stratégiques, archives de projets IA, déploiements rapides.</p>
+  </section>
+</main>
 
-  <footer>
-    &copy; 2025 NetSecurePro IA - Zoubirou Mohammed Ilyes — 
-    <a href="https://orcid.org/0009-0007-7571-3178" target="_blank" style="color: var(--accent-color); text-decoration:none;">ORCID</a>
-  </footer>
-
-  <script>
-    function simulateIA() {
-      const output = document.getElementById('cli-output');
-      output.textContent = 'Processing cognitive request...';
-      setTimeout(() => {
-        output.textContent = 'IA22 visual system engaged ✔️';
-      }, 2000);
-    }
-  </script>
+<footer>
+  <p>© 2025 Zoubirou Mohammed Ilyes — <a href="https://orcid.org/0009-0007-7571-3178" target="_blank" rel="noopener noreferrer">ORCID 0009-0007-7571-3178</a></p>
+</footer>
 </body>
 </html>
