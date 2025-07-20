@@ -36,6 +36,7 @@
             margin-left: auto;
             margin-right: auto;
             text-align: left;
+            white-space: pre-wrap;
         }
         footer {
             margin-top: 30px;
@@ -69,6 +70,8 @@ echo "🔧 [INFO] Vérification du système..."</textarea>
                 result = "🔍 Type détecté : Fichier Debian\n🧠 Analyse IA : Paquet détecté.\n💡 Suggestion : Vérifie dpkg.";
             } else if (code.includes("echo")) {
                 result = "🔍 Type détecté : Script Bash\n🧠 Analyse IA : Syntaxe valide.\n💡 Suggestion : Exécute sous bash.";
+            } else if (code.includes("python") || code.includes(".py")) {
+                result = "🔍 Type détecté : Script Python\n🧠 Analyse IA : Structure détectée.\n💡 Suggestion : Vérifie indentation et exécute.";
             } else {
                 result = "❗ Format non reconnu. Recommence.";
             }
