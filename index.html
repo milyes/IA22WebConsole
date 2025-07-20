@@ -1,50 +1,177 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>IA22 Web Console</title>
-    <style>
-        body {font-family: Arial, sans-serif; text-align: center; padding: 20px; background: #f7f7f7;}
-        h1 {color: #007bff;}
-        textarea {width: 80%; font-family: monospace; margin-top: 20px;}
-        button {margin-top: 10px; padding: 10px 20px; background: #007bff; color: white; border: none; cursor: pointer; border-radius: 5px;}
-        pre {background: #111; color: #0f0; padding: 15px; margin-top: 15px; width: 80%; margin: 0 auto; text-align: left; white-space: pre-wrap;}
-        footer {margin-top: 30px; color: gray;}
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IA22 Visual Console — NetSecurePro</title>
+  <style>
+    :root {
+      --bg-color: #0c0c0c;
+      --accent-color: #00ffaa;
+      --text-color: #e0f7f3;
+      --font-mono: 'Source Code Pro', monospace;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      font-family: var(--font-mono);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem 1rem;
+      min-height: 100vh;
+      animation: fadeIn 1.5s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    header {
+      font-size: 2rem;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+      text-align: center;
+      text-shadow: 0 0 8px var(--accent-color);
+    }
+    .slogan {
+      margin: 1rem 0;
+    }
+    svg {
+      width: 100%;
+      height: 60px;
+    }
+    svg text {
+      font-size: 22px;
+      fill: var(--accent-color);
+      font-family: var(--font-mono);
+    }
+    main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      width: 100%;
+      max-width: 900px;
+    }
+    section.option {
+      background: rgba(0, 255, 170, 0.1);
+      border: 1px solid var(--accent-color);
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 0 12px rgba(0, 255, 170, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    section.option:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 18px var(--accent-color);
+    }
+    .cli {
+      margin-top: 2rem;
+      width: 90%;
+      max-width: 600px;
+      background: #111;
+      border: 1px solid var(--accent-color);
+      padding: 1rem;
+      font-size: 1rem;
+      color: var(--accent-color);
+      box-shadow: 0 0 8px rgba(0, 255, 170, 0.4);
+    }
+    .cli span::after {
+      content: "_";
+      animation: blink 1s step-start infinite;
+    }
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+    button#activateIA {
+      margin: 2rem auto 0;
+      background-color: var(--accent-color);
+      border: none;
+      color: var(--bg-color);
+      font-weight: 700;
+      font-size: 1.2rem;
+      padding: 0.75rem 2rem;
+      border-radius: 999px;
+      cursor: pointer;
+      box-shadow: 0 0 12px var(--accent-color);
+      transition: background-color 0.25s ease;
+      display: block;
+    }
+    button#activateIA:hover {
+      background-color: #00cc8c;
+    }
+    .qr {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #555;
+      text-align: center;
+      width: 100%;
+      max-width: 900px;
+      border-top: 1px solid #222;
+      padding-top: 1rem;
+    }
+    @media (max-width: 480px) {
+      header { font-size: 1.6rem; }
+      section.option { padding: 1rem; }
+    }
+  </style>
 </head>
 <body>
-    <h1>IA22 Web Console</h1>
-    <p>Analyse logique IA – HTML, JSON, Bash, Python</p>
-    <textarea id="codeInput" rows="6">#!/bin/bash
- echo "Analyse IA22 Web prête."</textarea><br>
-    <button onclick="lancerAnalyseIA()">Lancer IA</button>
-    <pre id="result"></pre>
-    <footer>© 2025 – NetSecurePro IA | Zoubirou Mohammed Ilyes</footer>
-    <script>
-        function lancerAnalyseIA() {
-            const code = document.getElementById("codeInput").value;
-            let result = "";
-            if (code.includes(".json")) {
-                result = "🔍 Type détecté : JSON
-🧠 Analyse IA : JSON valide.
-💡 Suggestion : utilise 'jq' pour vérifier.";
-            } else if (code.includes(".deb")) {
-                result = "🔍 Type détecté : Fichier Debian
-🧠 Analyse IA : Paquet détecté.
-💡 Suggestion : dpkg -i.";
-            } else if (code.includes("echo")) {
-                result = "🔍 Type détecté : Bash / Shell
-🧠 Analyse IA : Script basique reconnu.
-💡 Suggestion : exécute sous bash.";
-            } else if (code.includes("import")) {
-                result = "🔍 Type détecté : Python probable
-🧠 Analyse IA : Code Python détecté.
-💡 Suggestion : vérifier syntaxe Python.";
-            } else {
-                result = "❗ Format non reconnu ou vide. Essaie un autre code.";
-            }
-            document.getElementById("result").innerText = result;
-        }
-    </script>
+  <header>Console IA22 — NetSecurePro</header>
+
+  <div class="slogan">
+    <svg>
+      <text x="50%" y="40" text-anchor="middle">
+        Signed Intelligence. Projected Vision.
+        <animate attributeName="fill" values="#00ffaa;#00ccff;#ff00cc;#00ffaa" dur="4s" repeatCount="indefinite"/>
+      </text>
+    </svg>
+  </div>
+
+  <main>
+    <section class="option">
+      <h2>Thème Dark Neon</h2>
+      <p>Fond noir élégant avec accents vert néon, typographie monospace pour effet terminal IA.</p>
+    </section>
+    <section class="option">
+      <h2>Layout Responsive</h2>
+      <p>Disposition en grille adaptative, compatible mobile & desktop, fluide et moderne.</p>
+    </section>
+    <section class="option">
+      <h2>Mode CLI / Visuel</h2>
+      <p>Interface stylisée avec zones de commande simulée et animations sur hover.</p>
+    </section>
+  </main>
+
+  <div class="cli">
+    <div>> IA22 /visual-console: <span id="cli-output">Ready...</span></div>
+  </div>
+
+  <button id="activateIA" onclick="simulateIA()">Activer IA Cognitive 🚀</button>
+
+  <div class="qr">
+    <p style="color: var(--text-color); font-size: 0.9rem;">Accès direct via QR :</p>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=https://milyes.github.io/IA22WebConsole/" alt="QR IA22">
+  </div>
+
+  <footer>
+    &copy; 2025 NetSecurePro IA - Zoubirou Mohammed Ilyes — 
+    <a href="https://orcid.org/0009-0007-7571-3178" target="_blank" style="color: var(--accent-color); text-decoration:none;">ORCID</a>
+  </footer>
+
+  <script>
+    function simulateIA() {
+      const output = document.getElementById('cli-output');
+      output.textContent = 'Processing cognitive request...';
+      setTimeout(() => {
+        output.textContent = 'IA22 visual system engaged ✔️';
+      }, 2000);
+    }
+  </script>
 </body>
 </html>
