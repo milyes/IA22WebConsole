@@ -1,76 +1,79 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>IA22 Web Console · Interface Cognitive</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="js/ia22_neuro.js" defer></script>
+    <meta charset="UTF-8">
+    <title>Console IA22 Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background: #f7f7f7;
+        }
+        h1 {
+            color: #007bff;
+        }
+        textarea {
+            width: 80%;
+            font-family: monospace;
+            margin-top: 20px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        pre {
+            background: #111;
+            color: #0f0;
+            padding: 15px;
+            margin-top: 15px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+        footer {
+            margin-top: 30px;
+            color: gray;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>🧠 IA22 Web Console</h1>
-    <p>Technologie cognitive immersive · Console interactive IA signée</p>
-    <nav>
-      <ul>
-        <li><a href="#console">Terminal IA</a></li>
-        <li><a href="#modules">Modules IA22</a></li>
-        <li><a href="#vision">Vision biométrique</a></li>
-        <li><a href="#signature">Signature IA22</a></li>
-      </ul>
-    </nav>
-  </header>
+    <h1>Console IA22 Web</h1>
+    <p>Analyse intelligente de logique IA – HTML, JSON, Python, Bash</p>
 
-  <main>
-    <section id="console">
-      <h2>💻 Terminal Cognitif</h2>
-      <textarea id="codeInput" rows="6" cols="60">#!/bin/bash
-echo "🔍 Analyse cognitive IA22 activée..."</textarea>
-      <button onclick="lancerAnalyseIA()">Lancer Analyse IA</button>
-      <pre id="result">🧠 Résultat IA22 affiché ici…</pre>
-    </section>
+    <textarea id="codeInput" rows="6">#!/bin/bash
+DEB_FILE="netsecurepro_web_cli_REAL.deb"
+echo "🔧 [INFO] Vérification du système..."</textarea>
+    <br>
+    <button onclick="lancerAnalyseIA()">Lancer Analyse IA</button>
+    <pre id="result"></pre>
 
-    <section id="modules">
-      <h2>🔗 Modules IA22</h2>
-      <ul>
-        <li>🧬 VISION · Reconnaissance visuelle</li>
-        <li>🔐 SECURITY · Filtrage cognitif & cryptage</li>
-        <li>⚙️ CONFIG · Paramètres neuronaux personnalisés</li>
-        <li>🌐 API · Connectivité IA externe</li>
-        <li>📊 ANALYSIS · Réponse logique évolutive</li>
-      </ul>
-    </section>
+    <footer>
+        <p>© 2025 – NetSecurePro IA | Zoubirou Mohammed Ilyes</p>
+    </footer>
 
-    <section id="vision">
-      <h2>👁️ Projection Visuelle IA22</h2>
-      <img src="assets/oeil_ia22.jpg" alt="Image biométrique IA" id="imageVision" />
-      <p class="sig">Image perceptive analysée en mode neuro-spectral</p>
-    </section>
+    <script>
+        function lancerAnalyseIA() {
+            const code = document.getElementById("codeInput").value;
+            let result = "";
 
-    <section id="signature">
-      <h2>🧾 Signature IA Cognitive</h2>
-      <p><strong>ID Technique :</strong> IA22_LOGIC_CREATEDZ</p>
-      <p><strong>Signature :</strong> IA22_SIG_PUBLIC_2025 · Zoubirou Mohammed Ilyes</p>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 · IA22 Web Console · Montréal · GitHub Pages</p>
-  </footer>
-
-  <script>
-    function lancerAnalyseIA() {
-      const code = document.getElementById("codeInput").value;
-      const result = document.getElementById("result");
-
-      if (code.includes("bash") || code.includes("IA22")) {
-        result.textContent =
-          "✅ IA_LOGIC activée · Analyse neuronale en cours...\n" +
-          "🔍 Flux cognitif reconnu · Réponse IA22 générée.";
-      } else {
-        result.textContent =
-          "⚠️ Flux non identifié · Veuillez entrer un code compatible IA22.";
-      }
-    }
-  </script>
+            if (code.includes(".json")) {
+                result = "🔍 Type détecté : JSON\n🧠 Analyse IA : JSON bien formé.\n💡 Suggestion : Valide avec jq.";
+            } else if (code.includes(".deb")) {
+                result = "🔍 Type détecté : Fichier Debian\n🧠 Analyse IA : Paquet détecté.\n💡 Suggestion : Vérifie dpkg.";
+            } else if (code.includes("echo")) {
+                result = "🔍 Type détecté : Script Bash\n🧠 Analyse IA : Syntaxe valide.\n💡 Suggestion : Exécute sous bash.";
+            } else {
+                result = "❗ Format non reconnu. Recommence.";
+            }
+            document.getElementById("result").innerText = result;
+        }
+    </script>
 </body>
 </html>
