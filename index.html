@@ -1,154 +1,25 @@
-🧠 Impulsion triple IA22 confirmée, Ilyes ! Ton cockpit NetSecurePro IA22 se projette maintenant sur trois vecteurs de diffusion :
-
-
----
-
-1️⃣ PDF Fiche IA22
-
-Fichier : IA22_Fiche_Technique.pdf
-– Format A4, typographie monospace, fond #0c0c0c, accents #00ffaa
-– Contenu :
-
-Titre : IA22 Web Console – Fiche Technique
-
-Slogan : Signed Intelligence. Projected Vision.
-
-Auteur & ORCID : Zoubirou Mohammed Ilyes · 0009-0007-7571-3178
-
-Version IA22 Final · APK specs (min SDK 21, target 29)
-
-Splashscreen IA22 (PNG intégré)
-
-Modules actifs listés
-
-Instructions rapide d’installation & QR Code
-
-
-→ Je t’ai préparé un HTML prêt à convertir en PDF (via “Imprimer → Enregistrer au format PDF”).
-
 <!DOCTYPE html>
 <html lang="fr">
-<head><meta charset="UTF-8"><title>Fiche Technique IA22</title>
-<style>
-  body { background: #0c0c0c; color: #00ffaa; font-family: monospace; padding: 2rem; }
-  h1 { font-size: 2.2rem; border-bottom: 2px solid #00ffaa; }
-  p, li { margin: .5rem 0; }
-  .qr { float: right; width: 120px; }
-  footer { border-top: 1px solid #004433; margin-top: 2rem; font-size: .8rem; text-align: center; color: #007744; }
-</style>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>IA22 Web Console</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>IA22 Web Console – Fiche Technique</h1>
-  <img src="assets/qr_gitpages.png" class="qr" alt="QR IA22"/>
-  <p><strong>Slogan :</strong> Signed Intelligence. Projected Vision.</p>
-  <p><strong>Auteur :</strong> Zoubirou Mohammed Ilyes – NetSecurePro IA</p>
-  <p><strong>ORCID :</strong> <a href="https://orcid.org/0009-0007-7571-3178" style="color:#00ffaa">0009-0007-7571-3178</a></p>
-  <h2>Version & APK</h2>
-  <ul>
-    <li>Version : IA22 Final</li>
-    <li>Min SDK 21 (Android 5.0+), Target SDK 29</li>
-    <li>APK : <code>IA22_Release.apk</code> (splash intégré, offline fallback)</li>
-  </ul>
-  <h2>Modules Actifs</h2>
-  <ul>
-    <li>WebView IA22 (HTML/CSS/JS offline)</li>
-    <li>Terminal CLI simulé</li>
-    <li>Splashscreen PNG & ASCII</li>
-    <li>Script Bash launcher</li>
-  </ul>
-  <h2>Installation Rapide</h2>
-  <pre>
-git clone https://github.com/milyes/IA22WebConsole.git
-cd IA22WebConsole
-bash launch_IA22.sh
-  </pre>
-  <footer>© 2025 Zoubirou Mohammed Ilyes – NetSecurePro IA</footer>
+  <header>
+    <h1>IA22 Web Console</h1>
+    <p class="slogan">Signed Intelligence. Projected Vision.</p>
+  </header>
+  <main>
+    <img src="assets/IA22Promo.png" alt="Visuel Promo IA22" class="promo">
+    <section class="download">
+      <a href="IA22_FINAL.zip" class="btn">Télécharger IA22_FINAL.zip</a>
+      <img src="assets/QRIA22Download.png" alt="QR IA22" class="qr">
+    </section>
+  </main>
+  <footer>
+    <p>by Z. M. Ilyes · ORCID: <a href="https://orcid.org/0009-0007-7571-3178">0009-0007-7571-3178</a></p>
+  </footer>
 </body>
 </html>
-
-
----
-
-2️⃣ Visuel Promo IA22
-
-Fichier : IA22_Promo_1200x1200.png
-– Dimensions : 1200×1200 px
-– Style : fond #0c0c0c, texte monospace #00ffaa, logo NetSecurePro IA
-– Contenu :
-
-1. Header : “IA22 Web Console”
-
-
-2. Slogan : “Signed Intelligence. Projected Vision.”
-
-
-3. Badge GitHub : “🔗 milyes.github.io/IA22WebConsole”
-
-
-4. QR (en bas à droite) vers la démo
-
-
-5. Signature : “by Z. M. Ilyes – NetSecurePro IA”
-
-
-
-→ Je t’ai préparé un SVG exportable que tu peux convertir en PNG via Canva ou Inkscape :
-
-<svg width="1200" height="1200" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="1200" fill="#0c0c0c"/>
-  <text x="50%" y="20%" fill="#00ffaa" font-family="monospace" font-size="64" text-anchor="middle">IA22 Web Console</text>
-  <text x="50%" y="32%" fill="#00ffaa" font-family="monospace" font-size="32" text-anchor="middle">Signed Intelligence. Projected Vision.</text>
-  <text x="50%" y="44%" fill="#00ffaa" font-family="monospace" font-size="24" text-anchor="middle">🔗 milyes.github.io/IA22WebConsole</text>
-  <image href="assets/qr_gitpages.png" x="1050" y="1050" width="128" height="128"/>
-  <text x="50%" y="95%" fill="#007744" font-family="monospace" font-size="18" text-anchor="middle">by Z. M. Ilyes – NetSecurePro IA</text>
-</svg>
-
-
----
-
-3️⃣ ISO VM IA22
-
-Fichier : IA22_VM_Live.iso
-– Base : Debian minimal + WebView (Chromium Embedded)
-– Contenu :
-
-/opt/ia22/ → index.html, style.css, script.js, assets/
-
-Autostart : script ~/start_ia22.sh lance WebView en plein écran
-
-Splash CLI : ~/launch_IA22.sh affiche ASCII puis démarre WebView
-
-Configuration : lightdm auto-login sur user ia22
-– Usage :
-
-
-# Démarrer en live USB ou VM
-boot IA22_VM_Live.iso
-# À l’accueil, WebView IA22 se lance automatiquement après splash
-
-→ Je t’ai préparé le blueprint preseed.cfg et le script build_iso.sh pour générer l’ISO :
-
-# build_iso.sh
-#!/bin/bash
-# Génère IA22_VM_Live.iso via debootstrap
-WORKDIR=ia22_iso
-mkdir -p $WORKDIR
-sudo debootstrap --arch amd64 bullseye $WORKDIR http://deb.debian.org/debian
-# Copy assets & scripts
-sudo cp -r ../IA22WebConsole $WORKDIR/opt/ia22
-sudo cp build_preseed.cfg $WORKDIR/preseed.cfg
-# Configuraton auto-login lightdm, splash scripts...
-# ...
-# Crée l’ISO
-sudo genisoimage -r -V "IA22 Live" -cache-inodes -J -l \
-  -b isolinux/isolinux.bin -c isolinux/boot.cat \
-  -no-emul-boot -boot-load-size 4 -boot-info-table \
-  -o IA22_VM_Live.iso $WORKDIR
-
-
----
-
-🛸 Ta propulsion IA22 triple est prête à décoller !
-Dis-moi si tu souhaites le PDF exporté, le visuel PNG, ou l’ISO générée (ou les trois).
-Ton écosystème NetSecurePro IA22 attend son lancement officiel.
-
