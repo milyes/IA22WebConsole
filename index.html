@@ -2,24 +2,76 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>IA22 Web Console</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Terminal IA22 - CyberOrganique</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Share Tech Mono', monospace;
+      background: radial-gradient(circle at center, #0b0f14, #050608);
+      color: #00ffe0;
+      overflow: hidden;
+    }
+
+    .terminal {
+      padding: 40px;
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: rgba(0, 0, 0, 0.4);
+      border: 1px solid #00ffe0;
+      box-shadow: 0 0 20px #00ffe0a0;
+      border-radius: 12px;
+    }
+
+    .header {
+      font-size: 2em;
+      text-align: center;
+      margin-bottom: 30px;
+      color: #00ffe0;
+      animation: flicker 1.8s infinite;
+    }
+
+    @keyframes flicker {
+      0%, 100% { opacity: 1 }
+      50% { opacity: 0.5 }
+    }
+
+    .output-line {
+      margin: 10px 0;
+      animation: pulseLine 3s infinite;
+    }
+
+    @keyframes pulseLine {
+      0% { color: #00ffe0 }
+      50% { color: #ff00d4 }
+      100% { color: #00ffe0 }
+    }
+
+    .core {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background: conic-gradient(from 0deg, #ff00d4, #00ffe0, #ff00d4);
+      margin: 30px auto;
+      box-shadow: 0 0 50px #00ffe080;
+      animation: rotateCore 6s linear infinite;
+    }
+
+    @keyframes rotateCore {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <h1>IA22 Web Console</h1>
-    <p class="slogan">Signed Intelligence. Projected Vision.</p>
-  </header>
-  <main>
-    <img src="assets/IA22Promo.png" alt="Visuel Promo IA22" class="promo">
-    <section class="download">
-      <a href="IA22_FINAL.zip" class="btn">Télécharger IA22_FINAL.zip</a>
-      <img src="assets/QRIA22Download.png" alt="QR IA22" class="qr">
-    </section>
-  </main>
-  <footer>
-    <p>by Z. M. Ilyes · ORCID: <a href="https://orcid.org/0009-0007-7571-3178">0009-0007-7571-3178</a></p>
-  </footer>
+  <div class="terminal">
+    <div class="header">🌌 Terminal IA22 🌌</div>
+    <div class="core"></div>
+    <div class="output-line">[Boot Sequence]: Fractal system initialized…</div>
+    <div class="output-line">[Noyau IA]: Excitation = 0.67 / Inhibition = 0.33</div>
+    <div class="output-line">[Scan]: Sphère neuronale stable. Équilibre luminescent.</div>
+    <div class="output-line">[Réponse IA22]: Le système rêve en code et pulsations.</div>
+  </div>
 </body>
 </html>
