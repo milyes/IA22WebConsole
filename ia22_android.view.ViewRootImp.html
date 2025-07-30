@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>IA22_LOGIC • ViewRootImp</title>
+  <style>
+    body {
+      background-color: #0a0f1c;
+      font-family: 'Courier New', monospace;
+      color: #0ff;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      color: #00f6ff;
+      text-shadow: 0 0 8px #00f6ff;
+    }
+    .module-box {
+      background-color: #121826;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0,255,255,0.15);
+      margin-top: 20px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: linear-gradient(45deg, #00f6ff, #0044ff);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧠 IA22_LOGIC • ViewRootImp</h1>
+  <div class="module-box">
+    <p>Initialisation du composant logique Android IA22 (ViewRootImpl simulé)</p>
+    <button onclick="launchIA()">Lancer IA Android</button>
+    <div id="resultBox">📡 En attente...</div>
+  </div>
+
+  <script>
+    function launchIA() {
+      document.getElementById("resultBox").innerHTML =
+        "🔁 ViewRootImp Simulation active<br>🧠 État logique IA22 : <strong>CONNECTÉ</strong><br>code200";
+    }
+  </script>
+</body>
+</html>
